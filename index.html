@@ -145,7 +145,7 @@
     fetch('/cities').then(function (response) {
         return response.text();
     }).then(function (text) {
-        document.querySelector('main').innerHTML = text;
+        // document.querySelector('main').innerHTML = text;
     }).catch(function (error) {
         document.querySelector('main').innerHTML = error;
     });
