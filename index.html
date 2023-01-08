@@ -66,6 +66,76 @@
     </header>
     <main>
         <h1>0.0.1</h1>
+        <style>
+            /* Add some styling to make the list look nice */
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            li {
+                display: flex;
+                align-items: center;
+                padding: 16px;
+                margin-bottom: 8px;
+                background-color: #f5f5f5;
+                border-radius: 4px;
+            }
+            li img {
+                height: 48px;
+                width: 48px;
+                border-radius: 50%;
+                margin-right: 16px;
+            }
+            li h2 {
+                font-size: 18px;
+                margin: 0;
+            }
+            li p {
+                font-size: 14px;
+                color: #999;
+                margin: 0;
+            }
+        </style>
+        
+        <ul>
+            <li>
+                <img src="/images/flags/france.png" alt="Flag of France">
+                <div>
+                    <h2>Paris</h2>
+                    <p>France</p>
+                </div>
+            </li>
+            <li>
+                <img src="/images/flags/united-states.png" alt="Flag of the United States">
+                <div>
+                    <h2>New York</h2>
+                    <p>United States</p>
+                </div>
+            </li>
+            <li>
+                <img src="/images/flags/united-kingdom.png" alt="Flag of the United Kingdom">
+                <div>
+                    <h2>London</h2>
+                    <p>United Kingdom</p>
+                </div>
+            </li>
+            <li>
+                <img src="/images/flags/japan.png" alt="Flag of Japan">
+                <div>
+                    <h2>Tokyo</h2>
+                    <p>Japan</p>
+                </div>
+            </li>
+            <li>
+                <img src="/images/flags/australia.png" alt="Flag of Australia">
+                <div>
+                    <h2>Sydney</h2>
+                    <p>Australia</p>
+                </div>
+            </li>
+        </ul>
+        
     </main>
 </body>
 <!-- when the page loads, query the /cities endpoint in the main.go file. 
