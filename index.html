@@ -68,21 +68,17 @@
         <h1>0.0.1</h1>
     </main>
 </body>
-<!-- when the page loads, query the /cities endpoint in the main.go file then output it on the page if error report the error on the screen -->
+<!-- when the page loads, query the /cities endpoint in the main.go file. 
+    Make sure the output is readable in the browser as text. 
+    if error report the error on the screen -->
 <script>
-    fetch('/cities')
-        .then(response => response.json())
-        .then(data => {
-            document.querySelector('main').innerHTML = `
-                <h1>${data}</h1>
-            `;
-        })
-        .catch(error => {
-            document.querySelector('main').innerHTML = `
-                <h1>Error</h1>
-                <p>${error}</p>
-            `;
-        });
+    fetch('/cities').then(function (response) {
+        return response.text();
+    }).then(function (text) {
+        document.querySelector('main').innerHTML = text;
+    }).catch(function (error) {
+        document.querySelector('main').innerHTML = error;
+    });
 </script>
 
 </html>
