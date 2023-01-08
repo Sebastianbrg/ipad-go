@@ -68,5 +68,17 @@
         <h1>Velkommen.</h1>
     </main>
 </body>
+<!-- query the cities endpoint in the main.go file then output it on the page if error report the error on the screen-->
+<script>
+    fetch('/cities').then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        var cities = document.getElementById('cities');
+        cities.innerHTML = data.join(', ');
+    }).catch(function (error) {
+        var cities = document.getElementById('cities');
+        cities.innerHTML = error;
+    });
+</script>
 
 </html>
